@@ -187,7 +187,7 @@ const indexHtml = `<!DOCTYPE html>
           <span class="text-2xl font-black tracking-tight text-white">Paulo<span class="text-burned-600">Leads</span></span>
           <span class="hidden sm:inline-block text-[10px] uppercase tracking-[0.2em] text-gray-500 border border-gray-700 rounded px-2 py-0.5">Leitura do Mercado</span>
         </a>
-        <a href="https://wa.me/5519982642481?text=Olá, vi a Leitura do Mercado e quero implementar o Protocolo Hidra" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-brand hover:bg-brand-light text-white rounded font-semibold text-xs uppercase tracking-wider transition-all whitespace-nowrap">Falar com Especialista</a>
+        <a href="https://wa.me/5519982642481?text=Olá, vi a Leitura do Mercado e quero implementar o Protocolo Hidra" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-brand hover:bg-bran[...]
       </div>
     </div>
   </nav>
@@ -198,10 +198,10 @@ const indexHtml = `<!DOCTYPE html>
           <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> Inteligência de Mercado • Atualizado ${lastmodDate}
         </div>
         <h1 class="text-4xl sm:text-5xl font-black text-white leading-tight mb-4">Leitura do <span class="text-burned-500">Mercado</span></h1>
-        <p class="text-lg text-gray-400 max-w-3xl mx-auto">Análises estratégicas de notícias transformadas em ativos semânticos proprietários, conectadas ao Protocolo Hidra e à infraestrutura comercial da Paulo Leads.</p>
+        <p class="text-lg text-gray-400 max-w-3xl mx-auto">Análises estratégicas de notícias transformadas em ativos semânticos proprietários, conectadas ao Protocolo Hidra e à infraestrutura co[...]
       </div>
       <div class="mb-8">
-        <input type="text" id="search" placeholder="Buscar por título, tese, framework, entidades, conceitos ou tags…" class="w-full px-5 py-4 bg-navy-800 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-burned-500 transition-colors" />
+        <input type="text" id="search" placeholder="Buscar por título, tese, framework, entidades, conceitos ou tags…" class="w-full px-5 py-4 bg-navy-800 border border-white/10 rounded-xl tex[...]
       </div>
       <div class="flex items-center justify-between text-xs text-gray-500 mb-8 pb-4 border-b border-white/5 flex-wrap gap-2">
         <span>Total de análises: ${items.length}</span>
@@ -224,7 +224,7 @@ const indexHtml = `<!DOCTYPE html>
     const searchEl = document.getElementById('search');
 
     function badge(text, extra = '') {
-      return `<span class="text-[10px] bg-navy-700 px-2 py-1 rounded-full text-gray-300 border border-white/5 ${extra}">${text}</span>`;
+      return '<span class="text-[10px] bg-navy-700 px-2 py-1 rounded-full text-gray-300 border border-white/5 ' + extra + '">' + text + '</span>';
     }
 
     function render(filter = '') {
@@ -245,56 +245,56 @@ const indexHtml = `<!DOCTYPE html>
         return blob.includes(f);
       });
 
-      entriesEl.innerHTML = filtered.map(e => `
-        <article class="entry bg-navy-800/40 border border-white/5 rounded-xl p-6 hover:border-burned-600/30 transition-all" id="${'${e.slug}'}">
-          <div class="flex items-start justify-between gap-3 flex-wrap mb-3">
-            <div>
-              <div class="text-xs uppercase tracking-wider text-gray-500 mb-2">${'${e.data || "Sem data"}'} • ${'${e.tema_principal || "Sem tema"}'}</div>
-              <h2 class="text-2xl font-bold text-white leading-tight">${'${e.titulo}'}</h2>
-            </div>
-            ${'${e.nivel_impacto ? `<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-burned-600/15 border border-burned-600/30 text-burned-500">${e.nivel_impacto}</span>` : ""}'}
-          </div>
-          ${'${e.resumo_noticia ? `<p class="text-gray-300 mb-4 leading-relaxed">${e.resumo_noticia}</p>` : ""}'}
-          <div class="grid md:grid-cols-2 gap-4 mb-4 text-sm">
-            <div>
-              <div class="text-xs uppercase tracking-wider text-gray-500 mb-2">Teses Hidra</div>
-              <div class="flex flex-wrap gap-2">${'${(e.tese_hidra || []).map(t => badge(t)).join("") || badge("Não informado")}'}</div>
-            </div>
-            <div>
-              <div class="text-xs uppercase tracking-wider text-gray-500 mb-2">Framework</div>
-              <div class="flex flex-wrap gap-2">${'${e.framework_hidra ? badge(e.framework_hidra) : badge("Não informado")}'}</div>
-            </div>
-          </div>
-          ${'${e.comentario_paulo ? `<div class="mb-4"><div class="text-xs uppercase tracking-wider text-gray-500 mb-2">Comentário Paulo</div><p class="text-gray-300 leading-relaxed">${e.comentario_paulo}</p></div>` : ""}'}
-          <div class="grid md:grid-cols-2 gap-4 mb-4 text-sm">
-            <div>
-              <div class="text-xs uppercase tracking-wider text-gray-500 mb-2">Entidades</div>
-              <div class="flex flex-wrap gap-2">${'${(e.entidades || []).map(x => badge(x)).join("") || badge("—")}'}</div>
-            </div>
-            <div>
-              <div class="text-xs uppercase tracking-wider text-gray-500 mb-2">Conceitos</div>
-              <div class="flex flex-wrap gap-2">${'${(e.conceitos || []).map(x => badge(x)).join("") || badge("—")}'}</div>
-            </div>
-          </div>
-          <div class="grid md:grid-cols-2 gap-4 mb-4 text-sm">
-            <div>
-              <div class="text-xs uppercase tracking-wider text-gray-500 mb-2">Tags Hidra</div>
-              <div class="flex flex-wrap gap-2">${'${(e.tags_hidra || []).map(x => badge(x)).join("") || badge("—")}'}</div>
-            </div>
-            <div>
-              <div class="text-xs uppercase tracking-wider text-gray-500 mb-2">Relações de Grafo</div>
-              <div class="space-y-2">${'${(e.relacoes_grafo || []).map(r => `<div class="font-mono text-xs text-gray-400 break-all bg-navy-900/40 border border-white/5 rounded px-3 py-2">${r}</div>`).join("") || `<div class="font-mono text-xs text-gray-500">—</div>`}'}</div>
-            </div>
-          </div>
-          <div class="flex items-center justify-between gap-4 flex-wrap pt-4 border-t border-white/5">
-            <div class="text-xs text-gray-500">ID: <span class="font-mono">${'${e.id}'}</span></div>
-            <div class="flex items-center gap-4">
-              <a href="#${'${e.slug}'}" class="text-sm text-burned-500 hover:text-burned-400">Link direto</a>
-              ${'${e.url ? `<a href="${e.url}" target="_blank" rel="noopener noreferrer" class="text-sm text-white hover:text-burned-400">Fonte original</a>` : ""}'}
-            </div>
-          </div>
-        </article>
-      `).join('');
+      entriesEl.innerHTML = filtered.map(e =>
+        '<article class="entry bg-navy-800/40 border border-white/5 rounded-xl p-6 hover:border-burned-600/30 transition-all" id="' + e.slug + '">' +
+          '<div class="flex items-start justify-between gap-3 flex-wrap mb-3">' +
+            '<div>' +
+              '<div class="text-xs uppercase tracking-wider text-gray-500 mb-2">' + (e.data || "Sem data") + ' • ' + (e.tema_principal || "Sem tema") + '</div>' +
+              '<h2 class="text-2xl font-bold text-white leading-tight">' + e.titulo + '</h2>' +
+            '</div>' +
+            (e.nivel_impacto ? '<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-burned-600/15 border border-burned-600/30 text-burned-500">' + e.nivel_impacto + '</span>' : '') +
+          '</div>' +
+          (e.resumo_noticia ? '<p class="text-gray-300 mb-4 leading-relaxed">' + e.resumo_noticia + '</p>' : '') +
+          '<div class="grid md:grid-cols-2 gap-4 mb-4 text-sm">' +
+            '<div>' +
+              '<div class="text-xs uppercase tracking-wider text-gray-500 mb-2">Teses Hidra</div>' +
+              '<div class="flex flex-wrap gap-2">' + ((e.tese_hidra || []).map(t => badge(t)).join("") || badge("Não informado")) + '</div>' +
+            '</div>' +
+            '<div>' +
+              '<div class="text-xs uppercase tracking-wider text-gray-500 mb-2">Framework</div>' +
+              '<div class="flex flex-wrap gap-2">' + (e.framework_hidra ? badge(e.framework_hidra) : badge("Não informado")) + '</div>' +
+            '</div>' +
+          '</div>' +
+          (e.comentario_paulo ? '<div class="mb-4"><div class="text-xs uppercase tracking-wider text-gray-500 mb-2">Comentário Paulo</div><p class="text-gray-300 leading-relaxed">' + e.comentario_paulo + '</p></div>' : '') +
+          '<div class="grid md:grid-cols-2 gap-4 mb-4 text-sm">' +
+            '<div>' +
+              '<div class="text-xs uppercase tracking-wider text-gray-500 mb-2">Entidades</div>' +
+              '<div class="flex flex-wrap gap-2">' + ((e.entidades || []).map(x => badge(x)).join("") || badge("—")) + '</div>' +
+            '</div>' +
+            '<div>' +
+              '<div class="text-xs uppercase tracking-wider text-gray-500 mb-2">Conceitos</div>' +
+              '<div class="flex flex-wrap gap-2">' + ((e.conceitos || []).map(x => badge(x)).join("") || badge("—")) + '</div>' +
+            '</div>' +
+          '</div>' +
+          '<div class="grid md:grid-cols-2 gap-4 mb-4 text-sm">' +
+            '<div>' +
+              '<div class="text-xs uppercase tracking-wider text-gray-500 mb-2">Tags Hidra</div>' +
+              '<div class="flex flex-wrap gap-2">' + ((e.tags_hidra || []).map(x => badge(x)).join("") || badge("—")) + '</div>' +
+            '</div>' +
+            '<div>' +
+              '<div class="text-xs uppercase tracking-wider text-gray-500 mb-2">Relações de Grafo</div>' +
+              '<div class="space-y-2">' + ((e.relacoes_grafo || []).map(r => '<div class="font-mono text-xs text-gray-400 break-all bg-navy-900/40 border border-white/5 rounded px-3 py-2">' + r + '</div>').join("") || '') + '</div>' +
+            '</div>' +
+          '</div>' +
+          '<div class="flex items-center justify-between gap-4 flex-wrap pt-4 border-t border-white/5">' +
+            '<div class="text-xs text-gray-500">ID: <span class="font-mono">' + e.id + '</span></div>' +
+            '<div class="flex items-center gap-4">' +
+              '<a href="#' + e.slug + '" class="text-sm text-burned-500 hover:text-burned-400">Link direto</a>' +
+              (e.url ? '<a href="' + e.url + '" target="_blank" rel="noopener noreferrer" class="text-sm text-white hover:text-burned-400">Fonte original</a>' : '') +
+            '</div>' +
+          '</div>' +
+        '</article>'
+      ).join('');
     }
 
     searchEl.addEventListener('input', e => render(e.target.value));
