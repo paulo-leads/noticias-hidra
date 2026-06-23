@@ -20,10 +20,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
       - name: Install dependencies
         run: npm install
+
+      - name: Ensure docs directory exists
+        run: mkdir -p docs
 
       - name: Build static files
         env:
@@ -32,6 +34,28 @@ jobs:
           SITE_BASE_URL: ${{ secrets.SITE_BASE_URL }}
           SITE_TITLE: ${{ secrets.SITE_TITLE }}
         run: npm run build
+
+      - name: Disable Jekyll
+        run: touch docs/.nojekyll
+
+      - name: Add fallback index if missing
+        run: |
+          if [ ! -f docs/index.html ]; then
+            cat > docs/index.html <<'HTML'
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leitura do Mercado | Paulo Leads</title>
+</head>
+<body>
+  <h1>Leitura do Mercado</h1>
+  <p>Build executado, mas nenhum conteúdo foi gerado em docs/index.html.</p>
+</body>
+</html>
+HTML
+          fi
 
       - name: Commit generated files
         run: |
