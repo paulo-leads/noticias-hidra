@@ -1,6 +1,6 @@
 # noticias-hidra
 
-Espaço dedicado à **Leitura do Mercado** da Paulo Leads, alimentado por uma base de dados toda semana e publicado.
+Site estático da base **Leitura do Mercado** da Paulo Leads, alimentado por uma database do Notion e publicado via GitHub Pages.
 
 ## Variáveis
 
