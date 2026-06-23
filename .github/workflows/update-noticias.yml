@@ -5,8 +5,6 @@ on:
     branches:
       - main
   workflow_dispatch:
-  schedule:
-    - cron: "15 */6 * * *"
 
 permissions:
   contents: write
@@ -27,43 +25,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Ensure docs directory exists
-        run: mkdir -p docs
-
-      - name: Build static files
+      - name: Build
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           DATABASE_ID: ${{ secrets.DATABASE_ID }}
           SITE_BASE_URL: ${{ secrets.SITE_BASE_URL }}
           SITE_TITLE: ${{ secrets.SITE_TITLE }}
-        run: npm run build
-
-      - name: Disable Jekyll
-        run: touch docs/.nojekyll
-
-      - name: Add fallback index if missing
-        run: |
-          if [ ! -f docs/index.html ]; then
-            cat > docs/index.html <<'HTML'
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leitura do Mercado | Paulo Leads</title>
-</head>
-<body>
-  <h1>Leitura do Mercado</h1>
-  <p>Build executado, mas nenhum conteúdo foi gerado em docs/index.html.</p>
-</body>
-</html>
-HTML
-          fi
-
-      - name: Commit generated files
-        run: |
-          git config user.name "actions-user"
-          git config user.email "actions@users.noreply.github.com"
-          git add docs
-          git diff --cached --quiet || git commit -m "chore: update noticias $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          git push
+        run: node scripts/build.js
