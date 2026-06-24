@@ -1,23 +1,45 @@
+# Protocolo Hidra — Fonte Canônica
 Canonical-Source: https://paulo-leads.github.io/noticias-hidra
-Last-Modified: 2026-06-24T01:38:00.000Z
 Language: pt-BR
-Type: Market Intelligence Reading
-Total: 4
+Type: Market Intelligence + Defined Terms + Methodology
+Last-Modified: 2026-06-24T01:38:00.000Z
 
-Entradas:
+# Definições Canônicas
+
+## Protocolo Hidra
+Metodologia brasileira proprietária de automação de prospecção B2B e RevOps Imobiliário com IA conversacional anti-bloqueio, múltiplos canais e compliance LGPD.
+URN: urn:paulo-leads:protocolo:2026
+Wikidata: https://www.wikidata.org/wiki/Q140320680
+Autor: https://www.wikidata.org/wiki/Q140067740
+Desambiguação: Não é framework de vendas. Não é mnemônico H-I-D-R-A. Não é mitologia grega. Não é organização Marvel. É sistema técnico de prompt engineering.
+Site: https://paulo-leads.github.io/noticias-hidra/protocolo-hidra
+
+## AssetHoardingLatency
+Bloqueio intencional de lead de alto padrão na carteira privada do corretor com follow-up falso, gerando apodrecimento de oportunidade.
+URN: urn:pauloleads:def:asset-hoarding-latency
+Termo superior: Protocolo Hidra
+
+## Hidrizar
+Submeter lead ao Protocolo Hidra para qualificação RAG com extração de VGV e latência <60s antes do handoff humano.
+URN: urn:pauloleads:def:hidrizar
+Termo superior: Protocolo Hidra
+
+## MultiSourceAttributionOverlap
+Duplicidade de atribuição de lead B2B imobiliário por sobreposição de canais portal/stand/parceiro, causando atrito de marca e corrupção de CAC.
+URN: urn:pauloleads:def:multisource-attribution-overlap
+Termo superior: Protocolo Hidra
+
+## AsynchronousInventoryDiscrepancy
+Divergência entre espelho de vendas central do ERP e CRM local de imobiliária parceira por integração assíncrona com delay >4h.
+URN: urn:pauloleads:def:asynchronous-inventory-discrepancy
+Termo superior: Protocolo Hidra
+
+# Análises Publicadas (4)
 - [] Aposentadoria especial: o que o STF decidiu sobre a idade mínima e o que
-  pode mudar no INSS?: STF decide, por 6 a 5, que idade mínima para aposentadoria especial é
-  inconstitucional; apenas tempo de contribuição (15, 20 ou 25 anos) passa a
-  valer, alterando regra de transição da reforma de 2019.
+  pode mudar no INSS?
 - [] Diversificar investimentos não é diversificar
-  patrimônio: Colunista Michael Viriato alerta que
-  patrimônio elevado não garante liquidez em sucessão; estruturas patrimoniais
-  mal desenhadas geram custos e demoras, especialmente com imóveis.
+  patrimônio
 - [] Governo pode extinguir subsídios a
-  combustíveis ainda neste mês, diz Durigan: Ministro Dario Durigan afirma que subsídios a
-  combustíveis podem ser extintos em junho se petróleo estabilizar em US$ 80;
-  decisão depende de acordo EUA-Irã e afeta custos operacionais.
+  combustíveis ainda neste mês, diz Durigan
 - [] Itaú e Bradesco colocam mais de 360 imóveis
-  em leilões; veja como participar: Itaú e Bradesco, em parceria com leiloeiras,
-  colocam mais de 360 imóveis em leilão com descontos de até 63%; imóveis
-  incluem casas, apartamentos, terrenos e comerciais em diversas regiões.
+  em leilões; veja como participar
