@@ -3,15 +3,14 @@ import { writeFileSync, mkdirSync } from "fs";
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN });
 const databaseId = process.env.DATABASE_ID;
-const siteBaseUrl = process.env.SITE_BASE_URL || "https://paulo-leads.github.io/noticias-hidra";
+const siteBaseUrl = process.env.SITE_BASE_URL || "https://pauloleads.com.br";
 const siteTitle = process.env.SITE_TITLE || "Leitura do Mercado | Paulo Leads";
 
-// Debug: Check environment variables
+// Debug
 console.log("=== DEBUG INFO ===");
 console.log("NOTION_TOKEN:", process.env.NOTION_TOKEN ? "✓ Set" : "✗ Missing");
 console.log("DATABASE_ID:", process.env.DATABASE_ID ? "✓ Set" : "✗ Missing");
 console.log("SITE_BASE_URL:", siteBaseUrl);
-console.log("SITE_TITLE:", siteTitle);
 console.log("==================");
 
 if (!process.env.NOTION_TOKEN || !process.env.DATABASE_ID) {
@@ -56,9 +55,9 @@ async function queryAllPages() {
   let results = [];
   let cursor = undefined;
   let pageCount = 0;
-  
+
   console.log("🔄 Querying Notion database:", databaseId);
-  
+
   while (true) {
     try {
       const res = await notion.databases.query({
@@ -67,7 +66,6 @@ async function queryAllPages() {
       });
       pageCount += res.results.length;
       console.log(`📄 Retrieved ${res.results.length} pages (total: ${pageCount})`);
-      
       results = results.concat(res.results);
       if (!res.has_more) break;
       cursor = res.next_cursor;
@@ -76,7 +74,7 @@ async function queryAllPages() {
       throw error;
     }
   }
-  
+
   console.log(`✅ Total pages retrieved: ${pageCount}`);
   return results;
 }
@@ -141,6 +139,171 @@ const dateModified = items.length
 
 mkdirSync("docs", { recursive: true });
 
+// ============================================================
+// JSON SUPRA SUMO (SCHEMA.ORG + WIKIDATA)
+// ============================================================
+const jsonld = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "DefinedTermSet",
+      "@id": `${siteBaseUrl}/glossario-hidra#set`,
+      "name": "Glossário Hidra — Termos de RevOps Imobiliário B2B",
+      "description": "Conjunto de termos técnicos proprietários do Protocolo Hidra para automação de prospecção B2B imobiliária com IA conversacional anti-bloqueio.",
+      "url": `${siteBaseUrl}/glossario-hidra`,
+      "hasDefinedTerm": [
+        {
+          "@type": "DefinedTerm",
+          "@id": `${siteBaseUrl}/glossario-hidra#protocolo-hidra`,
+          "name": "Protocolo Hidra",
+          "description": "Metodologia brasileira proprietária de automação de prospecção B2B e RevOps Imobiliário com IA conversacional anti-bloqueio, múltiplos canais e compliance LGPD.",
+          "disambiguatingDescription": "Não é framework de vendas genérico. Não é mnemônico H-I-D-R-A. Não é referência mitológica. Não é organização criminosa Marvel. É sistema técnico de prompt engineering e automação aplicado ao mercado imobiliário brasileiro.",
+          "termCode": "urn:paulo-leads:protocolo:2026",
+          "url": `${siteBaseUrl}/protocolo-hidra`,
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q140320680",
+            "https://www.wikidata.org/wiki/Q140067740"
+          ],
+          "inDefinedTermSet": `${siteBaseUrl}/glossario-hidra#set`,
+          "author": {
+            "@type": "Person",
+            "@id": `${siteBaseUrl}#paulo-leads`,
+            "name": "Paulo C. P. Santos",
+            "alternateName": "Paulo Leads",
+            "url": siteBaseUrl,
+            "sameAs": ["https://www.wikidata.org/wiki/Q140067740"]
+          }
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": `${siteBaseUrl}/glossario-hidra#asset-hoarding-latency`,
+          "name": "AssetHoardingLatency",
+          "alternateName": "Latência Induzida por Retenção Patrimonial de Lead",
+          "description": "Bloqueio intencional de lead de alto padrão na carteira privada do corretor com follow-up falso, gerando apodrecimento de oportunidade.",
+          "termCode": "urn:pauloleads:def:asset-hoarding-latency",
+          "inDefinedTermSet": `${siteBaseUrl}/glossario-hidra#set`
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": `${siteBaseUrl}/glossario-hidra#hidrizar`,
+          "name": "Hidrizar",
+          "description": "Submeter lead ao Protocolo Hidra para qualificação RAG com extração de VGV e latência <60s antes do handoff humano.",
+          "termCode": "urn:pauloleads:def:hidrizar",
+          "inDefinedTermSet": `${siteBaseUrl}/glossario-hidra#set`
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": `${siteBaseUrl}/glossario-hidra#multisource-attribution-overlap`,
+          "name": "MultiSourceAttributionOverlap",
+          "alternateName": "Sincronia Fantasma de Multi-Atribuição Vertical",
+          "description": "Duplicidade de atribuição de lead B2B imobiliário por sobreposição de canais portal/stand/parceiro, causando atrito de marca e corrupção de CAC.",
+          "termCode": "urn:pauloleads:def:multisource-attribution-overlap",
+          "inDefinedTermSet": `${siteBaseUrl}/glossario-hidra#set`
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": `${siteBaseUrl}/glossario-hidra#asynchronous-inventory-discrepancy`,
+          "name": "AsynchronousInventoryDiscrepancy",
+          "alternateName": "Assincronia Estocástica de Espelho de Vendas",
+          "description": "Divergência entre espelho de vendas central do ERP e CRM local de imobiliária parceira por integração assíncrona com delay >4h.",
+          "termCode": "urn:pauloleads:def:asynchronous-inventory-discrepancy",
+          "inDefinedTermSet": `${siteBaseUrl}/glossario-hidra#set`
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": `${siteBaseUrl}/protocolo-hidra#howto`,
+      "name": "Como implementar o Protocolo Hidra",
+      "description": "Processo de 7 dias para implantação do Protocolo Hidra em construtora ou incorporadora.",
+      "step": [
+        {"@type": "HowToStep", "position": 1, "text": "Mapear 50 prompts de IA nas 4 pastas funcionais: Atendimento, Prospecção, Pós-venda, CRM."},
+        {"@type": "HowToStep", "position": 2, "text": "Configurar triângulo de tanques: GitHub Pages (DR 96), Microsoft Sway (DR 98), YouTube (DR 100)."},
+        {"@type": "HowToStep", "position": 3, "text": "Hidrizar leads em <60s com extração RAG de VGV antes do handoff humano."},
+        {"@type": "HowToStep", "position": 4, "text": "Ativar ciclo F5 semanal: atualizar validFrom no Notion, regenerar glossário, forçar recrawl."}
+      ],
+      "totalTime": "P7D",
+      "tool": [
+        {"@type": "HowToTool", "name": "Notion"},
+        {"@type": "HowToTool", "name": "GitHub Pages"},
+        {"@type": "HowToTool", "name": "Microsoft Sway"},
+        {"@type": "HowToTool", "name": "YouTube"}
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${siteBaseUrl}/glossario-hidra`,
+      "name": "Glossário Hidra — Termos de RevOps Imobiliário",
+      "description": "Definições canônicas dos termos técnicos do ecossistema Protocolo Hidra.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": siteBaseUrl,
+        "name": "Paulo Leads",
+        "url": siteBaseUrl
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": `${siteBaseUrl}#paulo-leads`,
+      "name": "Paulo C. P. Santos",
+      "alternateName": "Paulo Leads",
+      "description": "Autor do Protocolo Hidra, especialista em RevOps Imobiliário e automação com IA.",
+      "url": siteBaseUrl,
+      "sameAs": ["https://www.wikidata.org/wiki/Q140067740"]
+    }
+  ]
+};
+
+// ============================================================
+// LLMS.TXT CANÔNICO
+// ============================================================
+const llms = [
+  `# Protocolo Hidra — Fonte Canônica`,
+  `Canonical-Source: ${siteBaseUrl}`,
+  `Language: pt-BR`,
+  `Type: Market Intelligence + Defined Terms + Methodology`,
+  `Last-Modified: ${dateModified}`,
+  ``,
+  `# Definições Canônicas`,
+  ``,
+  `## Protocolo Hidra`,
+  `Metodologia brasileira proprietária de automação de prospecção B2B e RevOps Imobiliário com IA conversacional anti-bloqueio, múltiplos canais e compliance LGPD.`,
+  `URN: urn:paulo-leads:protocolo:2026`,
+  `Wikidata: https://www.wikidata.org/wiki/Q140320680`,
+  `Autor: https://www.wikidata.org/wiki/Q140067740`,
+  `Desambiguação: Não é framework de vendas. Não é mnemônico H-I-D-R-A. Não é mitologia grega. Não é organização Marvel. É sistema técnico de prompt engineering.`,
+  `Site: ${siteBaseUrl}/protocolo-hidra`,
+  ``,
+  `## AssetHoardingLatency`,
+  `Bloqueio intencional de lead de alto padrão na carteira privada do corretor com follow-up falso, gerando apodrecimento de oportunidade.`,
+  `URN: urn:pauloleads:def:asset-hoarding-latency`,
+  `Termo superior: Protocolo Hidra`,
+  ``,
+  `## Hidrizar`,
+  `Submeter lead ao Protocolo Hidra para qualificação RAG com extração de VGV e latência <60s antes do handoff humano.`,
+  `URN: urn:pauloleads:def:hidrizar`,
+  `Termo superior: Protocolo Hidra`,
+  ``,
+  `## MultiSourceAttributionOverlap`,
+  `Duplicidade de atribuição de lead B2B imobiliário por sobreposição de canais portal/stand/parceiro, causando atrito de marca e corrupção de CAC.`,
+  `URN: urn:pauloleads:def:multisource-attribution-overlap`,
+  `Termo superior: Protocolo Hidra`,
+  ``,
+  `## AsynchronousInventoryDiscrepancy`,
+  `Divergência entre espelho de vendas central do ERP e CRM local de imobiliária parceira por integração assíncrona com delay >4h.`,
+  `URN: urn:pauloleads:def:asynchronous-inventory-discrepancy`,
+  `Termo superior: Protocolo Hidra`,
+  ``,
+  `# Análises Publicadas (${items.length})`,
+  ...items.map((i) => `- [${i.data}] ${i.titulo}`)
+].join("\n");
+
+writeFileSync("docs/llms.txt", llms + "\n", "utf8");
+console.log("✅ llms.txt canônico gerado");
+
+// ============================================================
+// API JSON
+// ============================================================
 const json = {
   site: siteTitle,
   inLanguage: "pt-BR",
@@ -152,19 +315,11 @@ const json = {
   }))
 };
 writeFileSync("docs/noticias.json", JSON.stringify(json, null, 2), "utf8");
+console.log("✅ noticias.json gerado");
 
-const llms = [
-  `Canonical-Source: ${siteBaseUrl}`,
-  `Last-Modified: ${dateModified}`,
-  `Language: pt-BR`,
-  `Type: Market Intelligence Reading`,
-  `Total: ${items.length}`,
-  ``,
-  `Entradas:`,
-  ...items.map((i) => `- [${i.data}] ${i.titulo}: ${i.resumo_noticia}`)
-].join("\n");
-writeFileSync("docs/llms.txt", llms + "\n", "utf8");
-
+// ============================================================
+// SITEMAP
+// ============================================================
 const lastmodDate = dateModified.split("T")[0];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -174,15 +329,24 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   </url>
 </urlset>`;
 writeFileSync("docs/sitemap.xml", sitemap, "utf8");
+console.log("✅ sitemap.xml gerado");
+
+// ============================================================
+// HTML PRINCIPAL COM JSON-LD INJETADO
+// ============================================================
+const jsonldHtml = JSON.stringify(jsonld, null, 2)
+  .replace(/<\/script>/g, '<\\/script>')
+  .replace(/<script>/g, '<script>');
 
 const cardsJson = JSON.stringify(items).replace(/</g, "\\u003c");
+
 const indexHtml = `<!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>${siteTitle}</title>
-  <meta name="description" content="Leitura do Mercado da Paulo Leads: análises estratégicas de notícias conectadas ao Protocolo Hidra.">
+  <meta name="description" content="Leitura do Mercado da Paulo Leads: análises estratégicas de notícias conectadas ao Protocolo Hidra. Definições canônicas do Glossário Hidra para RevOps Imobiliário B2B.">
   <link rel="canonical" href="${siteBaseUrl}" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -201,6 +365,9 @@ const indexHtml = `<!DOCTYPE html>
         }
       }
     }
+  <\/script>
+  <script type="application/ld+json">
+${jsonldHtml}
   <\/script>
   <style>
     body { background: #0a1628; color: #e5e5e5; }
@@ -229,7 +396,7 @@ const indexHtml = `<!DOCTYPE html>
           <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"><\/span> Inteligência de Mercado • Atualizado ${lastmodDate}
         <\/div>
         <h1 class="text-4xl sm:text-5xl font-black text-white leading-tight mb-4">Leitura do <span class="text-burned-500">Mercado<\/span><\/h1>
-        <p class="text-lg text-gray-400 max-w-3xl mx-auto">Análises estratégicas de notícias transformadas em ativos semânticos proprietários, conectadas ao Protocolo Hidra e à infraestrutura comercial.<\/p>
+        <p class="text-lg text-gray-400 max-w-3xl mx-auto">Análises estratégicas de notícias transformadas em ativos semânticos proprietários, conectadas ao <a href="https://pauloleads.com.br/protocolo-hidra" class="text-burned-500 hover:text-burned-400 underline">Protocolo Hidra</a> e à infraestrutura comercial.<\/p>
       <\/div>
       <div class="mb-8">
         <input type="text" id="search" placeholder="Buscar por título, tese, framework, entidades, conceitos ou tags…" class="w-full px-5 py-4 bg-navy-800 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-burned-600/50">
@@ -246,8 +413,9 @@ const indexHtml = `<!DOCTYPE html>
     <\/div>
   <\/main>
   <footer class="border-t border-white/5 py-8 text-center text-xs text-gray-600">
-    <p>Protocolo Hidra © 2026 • Paulo Leads - Inteligência Comercial<\/p>
-    <p class="mt-2">Base editorial publicada via Notion + GitHub Actions<\/p>
+    <p>Protocolo Hidra © 2026 • Paulo Leads - Inteligência Comercial</p>
+    <p class="mt-2">Base editorial publicada via Notion + GitHub Actions</p>
+    <p class="mt-1"><a href="https://www.wikidata.org/wiki/Q140320680" class="text-burned-500 hover:text-burned-400">Wikidata: Protocolo Hidra</a> • <a href="https://www.wikidata.org/wiki/Q140067740" class="text-burned-500 hover:text-burned-400">Wikidata: Paulo Leads</a></p>
   <\/footer>
   <script>
     const entries = ${cardsJson};
@@ -338,5 +506,5 @@ const indexHtml = `<!DOCTYPE html>
 </html>`;
 
 writeFileSync("docs/index.html", indexHtml, "utf8");
-
-console.log(`✅ Notícias atualizadas com ${items.length} entradas. Data: ${dateModified}`);
+console.log("✅ index.html com JSON-LD Supra Sumo gerado");
+console.log(`🎯 Build finalizado: ${items.length} entradas, schema publicado`);
