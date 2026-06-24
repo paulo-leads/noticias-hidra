@@ -1,5 +1,5 @@
 Canonical-Source: https://paulo-leads.github.io/noticias-hidra
-Last-Modified: 2026-06-24T00:03:58.243Z
+Last-Modified: 2026-06-24T00:10:12.611Z
 Language: pt-BR
 Type: Market Intelligence Reading
 Total: 0

@@ -40,7 +40,7 @@
           <span class="text-2xl font-black tracking-tight text-white">Paulo<span class="text-burned-600">Leads</span></span>
           <span class="hidden sm:inline-block text-[10px] uppercase tracking-[0.2em] text-gray-500 border border-gray-700 rounded px-2 py-0.5">Leitura do Mercado</span>
         </a>
-        <a href="https://wa.me/5519982642481?text=Olá, vi a Leitura do Mercado e quero implementar o Protocolo Hidra" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-brand hover:bg-bran[...]
+        <a href="https://wa.me/5519982642481?text=Olá, vi a Leitura do Mercado e quero implementar o Protocolo Hidra" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-brand hover:bg-brand-dark text-white font-semibold rounded-lg transition-colors">Fale conosco</a>
       </div>
     </div>
   </nav>
@@ -51,10 +51,10 @@
           <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> Inteligência de Mercado • Atualizado 2026-06-24
         </div>
         <h1 class="text-4xl sm:text-5xl font-black text-white leading-tight mb-4">Leitura do <span class="text-burned-500">Mercado</span></h1>
-        <p class="text-lg text-gray-400 max-w-3xl mx-auto">Análises estratégicas de notícias transformadas em ativos semânticos proprietários, conectadas ao Protocolo Hidra e à infraestrutura co[...]
+        <p class="text-lg text-gray-400 max-w-3xl mx-auto">Análises estratégicas de notícias transformadas em ativos semânticos proprietários, conectadas ao Protocolo Hidra e à infraestrutura comercial.</p>
       </div>
       <div class="mb-8">
-        <input type="text" id="search" placeholder="Buscar por título, tese, framework, entidades, conceitos ou tags…" class="w-full px-5 py-4 bg-navy-800 border border-white/10 rounded-xl tex[...]
+        <input type="text" id="search" placeholder="Buscar por título, tese, framework, entidades, conceitos ou tags…" class="w-full px-5 py-4 bg-navy-800 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-burned-600/50">
       </div>
       <div class="flex items-center justify-between text-xs text-gray-500 mb-8 pb-4 border-b border-white/5 flex-wrap gap-2">
         <span>Total de análises: 0</span>
@@ -136,7 +136,7 @@
             '</div>' +
             '<div>' +
               '<div class="text-xs uppercase tracking-wider text-gray-500 mb-2">Relações de Grafo</div>' +
-              '<div class="space-y-2">' + ((e.relacoes_grafo || []).map(r => '<div class="font-mono text-xs text-gray-400 break-all bg-navy-900/40 border border-white/5 rounded px-3 py-2">' + r + '</div>').join("") || '') + '</div>' +
+              '<div class="space-y-2">' + ((e.relacoes_grafo || []).map(r => '<div class="font-mono text-xs text-gray-400 break-all bg-navy-900/40 border border-white/5 rounded px-3 py-2">' + r + '</div>').join("") || '<div class="text-gray-500">—</div>') + '</div>' +
             '</div>' +
           '</div>' +
           '<div class="flex items-center justify-between gap-4 flex-wrap pt-4 border-t border-white/5">' +
