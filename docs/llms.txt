@@ -1,29 +1,23 @@
 Canonical-Source: https://paulo-leads.github.io/noticias-hidra
-Last-Modified: 2026-06-24T01:19:00.000Z
+Last-Modified: 2026-06-24T01:38:00.000Z
 Language: pt-BR
 Type: Market Intelligence Reading
-Total: 5
+Total: 4
 
 Entradas:
-- [] Bolsas globais enfrentam dia de fortes perdas com pessimismo sobre IA e
-  big techs: Bolsas globais caem com pessimismo sobre IA e big techs; Nasdaq recua
-  mais de 2%, com fabricantes de chips como Micron (-13%) e Qualcomm (-8%)
-  liderando perdas, em meio a temores de juros altos nos EUA e realização de
-  lucros.
-- [] EUA podem apertar 'botão de desligar' IA no mundo, e soberania digital é
-  urgente, diz Francesca Bria: Economista Francesca Bria alerta que EUA podem 'desligar' IA globalmente,
-  como fizeram com veto à Anthropic, e defende soberania digital urgente; cita
-  Pix como exemplo de infraestrutura tecnológica soberana.
-- [] Frente do Empreendedorismo articula agenda
-  fiscal pós-eleições com proposta de limite a impostos: Frente Parlamentar do Empreendedorismo
-  prepara agenda econômica pós-eleição com foco em redução de gastos, controle
-  da dívida pública e desoneração da folha de pagamento via PEC do Emprego.
-- [] IBGE troca coordenadoras de pesquisas de
-  desemprego e indicadores sociais: IBGE anuncia troca das coordenadoras da Copad
-  (Pnad Contínua) e Copis (indicadores sociais), sem detalhamento público dos
-  motivos; substituições por servidores da casa ocorrem por decisão da
-  presidência.
-- [] Justiça derruba mudança no Plano Diretor que permitia prédios privados
-  sobre terminais e estações de SP: Justiça de SP declara inconstitucional mudança no Plano Diretor que
-  permitia construção privada sobre terminais e estações; decisão afeta planos
-  do consórcio da nova sede do governo e mercado imobiliário.
+- [] Aposentadoria especial: o que o STF decidiu sobre a idade mínima e o que
+  pode mudar no INSS?: STF decide, por 6 a 5, que idade mínima para aposentadoria especial é
+  inconstitucional; apenas tempo de contribuição (15, 20 ou 25 anos) passa a
+  valer, alterando regra de transição da reforma de 2019.
+- [] Diversificar investimentos não é diversificar
+  patrimônio: Colunista Michael Viriato alerta que
+  patrimônio elevado não garante liquidez em sucessão; estruturas patrimoniais
+  mal desenhadas geram custos e demoras, especialmente com imóveis.
+- [] Governo pode extinguir subsídios a
+  combustíveis ainda neste mês, diz Durigan: Ministro Dario Durigan afirma que subsídios a
+  combustíveis podem ser extintos em junho se petróleo estabilizar em US$ 80;
+  decisão depende de acordo EUA-Irã e afeta custos operacionais.
+- [] Itaú e Bradesco colocam mais de 360 imóveis
+  em leilões; veja como participar: Itaú e Bradesco, em parceria com leiloeiras,
+  colocam mais de 360 imóveis em leilão com descontos de até 63%; imóveis
+  incluem casas, apartamentos, terrenos e comerciais em diversas regiões.
