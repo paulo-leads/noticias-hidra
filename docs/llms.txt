@@ -1,10 +1,15 @@
 Canonical-Source: https://paulo-leads.github.io/noticias-hidra
-Last-Modified: 2026-06-24T00:29:00.000Z
+Last-Modified: 2026-06-24T00:51:00.000Z
 Language: pt-BR
 Type: Market Intelligence Reading
-Total: 10
+Total: 20
 
 Entradas:
+- [] Aposentadoria especial: o que o STF decidiu
+  sobre a idade mínima e o que pode mudar no INSS?: STF decide, por 6 a 5, que idade mínima para
+  aposentadoria especial é inconstitucional; apenas tempo de contribuição (15,
+  20 ou 25 anos) passa a valer, alterando regra de transição da reforma de
+  2019.
 - [] Aposentadoria especial: o que o STF decidiu sobre a idade mínima e o que
   pode mudar no INSS?: STF decide, por 6 a 5, que idade mínima para aposentadoria especial é
   inconstitucional; apenas tempo de contribuição (15, 20 ou 25 anos) passa a
@@ -14,6 +19,15 @@ Entradas:
   mais de 2%, com fabricantes de chips como Micron (-12%) e Intel (-7%)
   liderando perdas, em meio a temores de juros altos nos EUA e realização de
   lucros.
+- [] Bolsas globais enfrentam dia de fortes perdas com pessimismo sobre IA e
+  big techs: Bolsas globais caem com pessimismo sobre IA e big techs; Nasdaq recua
+  mais de 2%, com fabricantes de chips como Micron (-12%) e Intel (-7%)
+  liderando perdas, em meio a temores de juros altos nos EUA e realização de
+  lucros.
+- [] Datafolha: Nova pesquisa sobre eleição presidencial é divulgada neste
+  sábado (20): Datafolha divulga nova pesquisa de intenção de voto para presidente, com
+  Lula (40%) à frente de Flávio Bolsonaro (31%) no primeiro turno; margem de
+  erro de 2 pontos percentuais.
 - [] Datafolha: Nova pesquisa sobre eleição presidencial é divulgada neste
   sábado (20): Datafolha divulga nova pesquisa de intenção de voto para presidente, com
   Lula (40%) à frente de Flávio Bolsonaro (31%) no primeiro turno; margem de
@@ -21,6 +35,13 @@ Entradas:
 - [] Diversificar investimentos não é diversificar patrimônio: Colunista Michael Viriato alerta que patrimônio elevado não garante
   liquidez em sucessão; estruturas patrimoniais mal desenhadas geram custos e
   demoras, especialmente com imóveis.
+- [] Diversificar investimentos não é diversificar patrimônio: Colunista Michael Viriato alerta que patrimônio elevado não garante
+  liquidez em sucessão; estruturas patrimoniais mal desenhadas geram custos e
+  demoras, especialmente com imóveis.
+- [] EUA podem apertar 'botão de desligar' IA no mundo, e soberania digital é
+  urgente, diz Francesca Bria: Economista Francesca Bria alerta que EUA podem 'desligar' IA globalmente,
+  como fizeram com veto à Anthropic, e defende soberania digital urgente; cita
+  Pix como exemplo de infraestrutura tecnológica soberana.
 - [] EUA podem apertar 'botão de desligar' IA no mundo, e soberania digital é
   urgente, diz Francesca Bria: Economista Francesca Bria alerta que EUA podem 'desligar' IA globalmente,
   como fizeram com veto à Anthropic, e defende soberania digital urgente; cita
@@ -29,6 +50,14 @@ Entradas:
   proposta de limite a impostos: Frente Parlamentar do Empreendedorismo prepara agenda econômica
   pós-eleição com foco em redução de gastos, controle da dívida pública e
   desoneração da folha de pagamento via PEC do Emprego.
+- [] Frente do Empreendedorismo articula agenda fiscal pós-eleições com
+  proposta de limite a impostos: Frente Parlamentar do Empreendedorismo prepara agenda econômica
+  pós-eleição com foco em redução de gastos, controle da dívida pública e
+  desoneração da folha de pagamento via PEC do Emprego.
+- [] Governo pode extinguir subsídios a combustíveis ainda neste mês, diz
+  Durigan: Ministro Dario Durigan afirma que subsídios a combustíveis podem ser
+  extintos em junho se petróleo estabilizar em US$ 80; decisão depende de
+  acordo EUA-Irã e afeta custos operacionais.
 - [] Governo pode extinguir subsídios a combustíveis ainda neste mês, diz
   Durigan: Ministro Dario Durigan afirma que subsídios a combustíveis podem ser
   extintos em junho se petróleo estabilizar em US$ 80; decisão depende de
@@ -36,10 +65,21 @@ Entradas:
 - [] IBGE troca coordenadoras de pesquisas de desemprego e indicadores sociais: IBGE anuncia troca das coordenadoras da Copad (Pnad Contínua) e Copis
   (indicadores sociais), sem detalhamento público dos motivos; substituições
   por servidores da casa ocorrem por decisão da presidência.
+- [] IBGE troca coordenadoras de pesquisas de desemprego e indicadores sociais: IBGE anuncia troca das coordenadoras da Copad (Pnad Contínua) e Copis
+  (indicadores sociais), sem detalhamento público dos motivos; substituições
+  por servidores da casa ocorrem por decisão da presidência.
 - [] Itaú e Bradesco colocam mais de 360 imóveis em leilões; veja como
   participar: Itaú e Bradesco, em parceria com leiloeiras, colocam mais de 360 imóveis
   em leilão com descontos de até 63%; imóveis incluem casas, apartamentos,
   terrenos e comerciais em diversas regiões.
+- [] Itaú e Bradesco colocam mais de 360 imóveis em leilões; veja como
+  participar: Itaú e Bradesco, em parceria com leiloeiras, colocam mais de 360 imóveis
+  em leilão com descontos de até 63%; imóveis incluem casas, apartamentos,
+  terrenos e comerciais em diversas regiões.
+- [] Justiça derruba mudança no Plano Diretor que permitia prédios privados
+  sobre terminais e estações de SP: Justiça de SP declara inconstitucional mudança no Plano Diretor que
+  permitia construção privada sobre terminais e estações; decisão afeta planos
+  do consórcio da nova sede do governo e mercado imobiliário.
 - [] Justiça derruba mudança no Plano Diretor que permitia prédios privados
   sobre terminais e estações de SP: Justiça de SP declara inconstitucional mudança no Plano Diretor que
   permitia construção privada sobre terminais e estações; decisão afeta planos
