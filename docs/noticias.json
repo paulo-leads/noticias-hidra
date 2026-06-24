@@ -1,7 +1,7 @@
 {
   "site": "Leitura do Mercado | Paulo Leads",
   "inLanguage": "pt-BR",
-  "dateModified": "2026-06-24T01:14:00.000Z",
+  "dateModified": "2026-06-24T01:19:00.000Z",
   "total": 5,
   "items": [
     {
@@ -149,17 +149,17 @@
       "page_url": "https://paulo-leads.github.io/noticias-hidra#frente-do-empreendedorismo-articula-agenda-fiscal-pos-eleicoes-com-proposta-de-limite-a-impostos"
     },
     {
-      "id": "3894b871-ab68-80a7-8778-c0dd141d1091",
+      "id": "3894b871-ab68-8059-b265-fe4f486ca917",
       "data": "",
-      "titulo": "IBGE troca coordenadoras de pesquisas de desemprego e indicadores sociais",
+      "titulo": "IBGE troca coordenadoras de pesquisas de\n  desemprego e indicadores sociais",
       "url": "",
       "tema_principal": "dados e rastreabilidade",
-      "resumo_noticia": "IBGE anuncia troca das coordenadoras da Copad (Pnad Contínua) e Copis\n  (indicadores sociais), sem detalhamento público dos motivos; substituições\n  por servidores da casa ocorrem por decisão da presidência.",
-      "comentario_paulo": "IBGE|Marcio Pochmann|Adriana Beringuy|Cristiane dos Santos\n  Moutinho|Leonardo Santos de Oliveira|Luanda Chaves Botelho|Copad|Copis|Pnad\n  Contínua",
+      "resumo_noticia": "IBGE anuncia troca das coordenadoras da Copad\n  (Pnad Contínua) e Copis (indicadores sociais), sem detalhamento público dos\n  motivos; substituições por servidores da casa ocorrem por decisão da\n  presidência.",
+      "comentario_paulo": "IBGE|Marcio Pochmann|Adriana\n  Beringuy|Cristiane dos Santos Moutinho|Leonardo Santos de Oliveira|Luanda\n  Chaves Botelho|Copad|Copis|Pnad Contínua",
       "entidades": [
         "confiabilidade de dados",
-        "descontinuidade metodológica",
-        "dependência de fonte\n  única",
+        "descontinuidade\n  metodológica",
+        "dependência de fonte única",
         "geointeligência",
         "rastreabilidade"
       ],
@@ -168,17 +168,17 @@
         "TH-006"
       ],
       "tese_hidra": [
-        "IBGE>introduz>Incerteza Metodológica",
-        "Incerteza\n  Metodológica>expõe>Dependência de Fonte Única",
-        "Dependência de Fonte\n  Única>aumenta_importancia_de>Ativos Proprietários de Dados",
-        "Ativos\n  Proprietários de Dados>compoe>Protocolo Hidra"
+        "IBGE>introduz>Incerteza\n  Metodológica",
+        "Incerteza Metodológica>expõe>Dependência de Fonte\n  Única",
+        "Dependência de Fonte Única>aumenta_importancia_de>Ativos\n  Proprietários de Dados",
+        "Ativos Proprietários de Dados>compoe>Protocolo\n  Hidra"
       ],
-      "framework_hidra": "A troca de comando no IBGE, sem justificativa pública, expõe a\n  fragilidade de operações que dependem de fonte única de dados oficiais; a\n  construção de ativos proprietários e validação cruzada é o antídoto.",
+      "framework_hidra": "A troca de comando no IBGE, sem justificativa\n  pública, expõe a fragilidade de operações que dependem de fonte única de\n  dados oficiais; a construção de ativos proprietários e validação cruzada é o\n  antídoto.",
       "relacoes_grafo": [
         "Protocolo Hidra",
-        "Infraestrutura de Dados",
+        "Infraestrutura de\n  Dados",
         "Orquestração de Dados",
-        "Soberania\n  de Dados",
+        "Soberania de Dados",
         "Geointeligência"
       ],
       "tags_hidra": [
@@ -186,11 +186,11 @@
       ],
       "nivel_impacto": "",
       "slug": "ibge-troca-coordenadoras-de-pesquisas-de-desemprego-e-indicadores-sociais",
-      "updated": "2026-06-24T01:14:00.000Z",
+      "updated": "2026-06-24T01:19:00.000Z",
       "page_url": "https://paulo-leads.github.io/noticias-hidra#ibge-troca-coordenadoras-de-pesquisas-de-desemprego-e-indicadores-sociais"
     },
     {
-      "id": "3894b871-ab68-80d7-af13-f26d385abb1c",
+      "id": "3894b871-ab68-8044-b2e9-f175057f4881",
       "data": "",
       "titulo": "Justiça derruba mudança no Plano Diretor que permitia prédios privados\n  sobre terminais e estações de SP",
       "url": "",
@@ -229,7 +229,7 @@
       ],
       "nivel_impacto": "",
       "slug": "justica-derruba-mudanca-no-plano-diretor-que-permitia-predios-privados-sobre-terminais-e-estacoes-de-sp",
-      "updated": "2026-06-24T01:14:00.000Z",
+      "updated": "2026-06-24T01:19:00.000Z",
       "page_url": "https://paulo-leads.github.io/noticias-hidra#justica-derruba-mudanca-no-plano-diretor-que-permitia-predios-privados-sobre-terminais-e-estacoes-de-sp"
     }
   ]

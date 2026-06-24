@@ -1,5 +1,5 @@
 Canonical-Source: https://paulo-leads.github.io/noticias-hidra
-Last-Modified: 2026-06-24T01:14:00.000Z
+Last-Modified: 2026-06-24T01:19:00.000Z
 Language: pt-BR
 Type: Market Intelligence Reading
 Total: 5
@@ -18,9 +18,11 @@ Entradas:
   fiscal pós-eleições com proposta de limite a impostos: Frente Parlamentar do Empreendedorismo
   prepara agenda econômica pós-eleição com foco em redução de gastos, controle
   da dívida pública e desoneração da folha de pagamento via PEC do Emprego.
-- [] IBGE troca coordenadoras de pesquisas de desemprego e indicadores sociais: IBGE anuncia troca das coordenadoras da Copad (Pnad Contínua) e Copis
-  (indicadores sociais), sem detalhamento público dos motivos; substituições
-  por servidores da casa ocorrem por decisão da presidência.
+- [] IBGE troca coordenadoras de pesquisas de
+  desemprego e indicadores sociais: IBGE anuncia troca das coordenadoras da Copad
+  (Pnad Contínua) e Copis (indicadores sociais), sem detalhamento público dos
+  motivos; substituições por servidores da casa ocorrem por decisão da
+  presidência.
 - [] Justiça derruba mudança no Plano Diretor que permitia prédios privados
   sobre terminais e estações de SP: Justiça de SP declara inconstitucional mudança no Plano Diretor que
   permitia construção privada sobre terminais e estações; decisão afeta planos
